@@ -40,6 +40,6 @@ Python • Pandas • NumPy • Scikit-learn • Matplotlib • Seaborn • Beau
 #CodvedaAchievements #CodvedaProjects  
 #DataScience #MachineLearning #Python #Internship  
 
-Repo complet → https://github.com/**TON_USERNAME_GITHUB**/Codveda-DataScience-Internship  
+Repo complet → https://github.com/Delmat237/Codveda-DataScience-Internship  
 
 @Codveda
