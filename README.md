@@ -38,3 +38,23 @@
   - `books_dataset.json`
 
 ## Structure de la branche
+```
+level1-web-scraping/
+├── notebooks/01_web_scraping_books.ipynb   ← Code complet + explications
+├── data/books_dataset.csv
+├── data/books_dataset.json
+└── README.md                               ← ce fichier
+```
+
+## Prochaines étapes (preview)
+Ce dataset sera directement réutilisé demain pour:  
+→ Level 1 Task 2: Data Cleaning & Preprocessing  
+→ Level 1 Task 3: Exploratory Data Analysis  
+
+#CodvedaJourney #CodvedaExperience #FutureWithCodveda  
+#CodvedaAchievements #CodvedaProjects  
+#DataScience #WebScraping #Python #BeautifulSoup  
+
+**Lien du repo principal**:[ https://github.com/LEONEL-AZANGUE/Codveda-DataScience-Internship/tree/level1-web-scraping  ](https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level1-web-scraping  )
+
+@Codveda
