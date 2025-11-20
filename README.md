@@ -55,6 +55,6 @@ Ce dataset sera directement réutilisé demain pour:
 #CodvedaAchievements #CodvedaProjects  
 #DataScience #WebScraping #Python #BeautifulSoup  
 
-**Lien du repo principal**:[ https://github.com/LEONEL-AZANGUE/Codveda-DataScience-Internship/tree/level1-web-scraping  ](https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level1-web-scraping  )
+**Lien du repo principal**:[ https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level1-web-scraping  ](https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level1-web-scraping  )
 
 @Codveda
