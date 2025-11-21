@@ -14,8 +14,8 @@ Réalisation des **9 tâches Data Science** (Basic → Intermediate → Advanced
 | Jour | Date       | Niveau       | Tâche                                    | Branch                        | Statut     |
 |------|------------|--------------|------------------------------------------|-------------------------------|------------|
 | 1    | 20/11/2025 | Level 1      | Data Collection & Web Scraping           | `level1-web-scraping`         | ✅ Done    |
-| 2    | 21/11/2025 | Level 1      | Data Cleaning & Preprocessing            | `level1-data-cleaning`        | ⏳ Today   |
-| 3    | 22/11/2025 | Level 1      | Exploratory Data Analysis (EDA) + Report | `level1-eda`                  |           |
+| 2    | 21/11/2025 | Level 1      | Data Cleaning & Preprocessing            | `level1-data-cleaning`        | ✅ Done  |
+| 3    | 22/11/2025 | Level 1      | Exploratory Data Analysis (EDA) + Report | `level1-eda`                  |         ⏳ Today   |
 | 4    | 23/11/2025 | Level 2      | Predictive Modeling – Regression         | `level2-regression`           |           |
 | 5    | 24/11/2025 | Level 2      | Classification (Logistic + comparaisons) | `level2-classification`       |           |
 | 6    | 25/11/2025 | Level 2      | Clustering K-Means + Elbow/Silhouette    | `level2-clustering`           |           |
