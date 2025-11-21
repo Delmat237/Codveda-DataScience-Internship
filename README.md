@@ -37,7 +37,7 @@
 ```
 level1-data-cleaning/
 ├── notebooks/02_data_cleaning_books.ipynb   ← Notebook complet + commentaires
-├── data/books_dataset.csv                   ← brut (issu Task 1)
+├── data/books_toscrape_complete.csv                   ← brut (issu Task 1)
 ├── data/books_cleaned.csv                   ← version finale nettoyée
 ├── data/books_cleaned.pkl                   ← pour chargement rapide
 └── README.md                                ← ce fichier
