@@ -1,55 +1,62 @@
-# Level 1 – Task 2: Data Cleaning & Preprocessing  
+# Level 1 – Task 3: Exploratory Data Analysis (EDA)  
 **Codveda Technologies – Data Science Internship**  
-**Azangue Leonel Delmat** | 21/11/2025 | ID: CV/A1/48181  
+**Azangue Leonel Delmat** | 22/11/2025 | ID: CV/A1/48181  
 
 ## Objectif officiel Codveda
-> Clean and preprocess a raw dataset to make it suitable for analysis.  
-> - Handle missing data (imputation, removal)  
-> - Detect and remove outliers  
-> - Convert categorical variables (one-hot / label encoding)  
-> - Normalize or standardize numerical data  
+> Perform exploratory data analysis to understand the underlying structure and trends in the data.  
+> - Visualize the data using histograms, scatter plots, box plots  
+> - Compute summary statistics  
+> - Identify correlations (correlation matrix)  
+> - Generate a report summarizing insights  
 
 ## Dataset utilisé
-**books_dataset.csv** – 1000 livres scrapés hier (Task 1)  
-→ Dataset brut réaliste avec vrais problèmes (prix **manquants** simulés, outliers de prix, catégories à encoder, etc.)
+`books_cleaned.csv` → 968 livres nettoyés (issu des tâches 1 & 2)
 
-## Méthodologie & Justification
+## Insights majeurs découverts (spoiler du notebook)
+- Prix moyen : £29.4 | Médiane : £25.9 → distribution asymétrique  
+- 49 catégories → mais 5 catégories représentent 58 % des livres  
+- Note moyenne : 3.88/5 → les clients sont plutôt généreux  
+- Corrélation forte : livres les plus chers = meilleure note moyenne  
+- Les livres “In Stock” ont un prix moyen +12 % plus élevé  
+- Top 5 catégories les plus chères : Poetry, Romance, Travel, Classics, Science  
 
-| Étape                        | Technique choisie                              | Justification                                                       |
-|-----------------------------|-------------------------------------------------|----------------------------------------------------------------------|
-| 1. Chargement & overview    | `pandas` + `df.info()`, `df.describe()`         | Identifier rapidement les types et les problèmes                     |
-| 2. Valeurs manquantes       | Imputation médiane pour le prix<br>Mode pour catégorie | Prix = numérique → médiane robuste<br>Catégorie = catégorielle      |
-| 3. Outliers                 | IQR method (1.5 × IQR) sur le prix              | Méthode standard et robuste aux distributions asymétriques          |
-| 4. Encodage catégoriel      | One-Hot Encoding sur `Category`                 | Pas d’ordre naturel → One-Hot est le choix le plus sûr               |
-| 5. Rating → numérique       | Déjà numérique (1-5) → rien à faire             | —                                                                    |
-| 6. Normalisation            | StandardScaler sur les variables numériques     | Prépare le dataset pour les modèles ML demain (Level 2)              |
-| 7. Sauvegarde               | `books_cleaned.csv` + `books_cleaned.pkl`       | Deux formats : lisible + rapide à charger                            |
-
-## Résultats avant/après
-| Métrique                  | Avant nettoyage       | Après nettoyage       |
-|---------------------------|-----------------------|-----------------------|
-| Lignes totales            | 1000                  | 968 (32 outliers supprimés) |
-| Valeurs manquantes        | 87 (prix)             | 0                     |
-| Catégories uniques        | 49                    | 49 (one-hot → 49 colonnes) |
-| Prix max                  | £54.99 → £99.99 (outliers) | £57.20             |
+## Visualisations générées
+- Distribution des prix (histogram + boxplot)  
+- Top 15 catégories par nombre de livres  
+- Prix moyen par note (1 à 5)  
+- Matrice de corrélation + heatmap  
+- Wordcloud des titres les plus fréquents  
 
 ## Structure de la branche
 ```
-level1-data-cleaning/
-├── notebooks/02_data_cleaning_books.ipynb   ← Notebook complet + commentaires
-├── data/books_toscrape_complete.csv                   ← brut (issu Task 1)
-├── data/books_cleaned.csv                   ← version finale nettoyée
-├── data/books_cleaned.pkl                   ← pour chargement rapide
-└── README.md                                ← ce fichier
+level1-eda/
+├── notebooks/03_eda_books.ipynb           ← Notebook complet + rapport intégré
+├── data/books_cleaned.csv                 ← dataset nettoyé
+├── results/                               ← 8 graphiques sauvegardés
+│   ├── price_distribution.png
+│   ├── top_categories.png
+│   └── correlation_heatmap.png
+└── README.md                              ← ce fichier
 ```
 
-## Prochaines étapes
-Ce dataset ultra-propre sera utilisé demain pour **Level 1 Task 3: Exploratory Data Analysis**
+## Conclusion du rapport
+Le dataset est maintenant parfaitement compris.  
+Les insights extraits seront directement utilisables pour des modèles de recommandation ou de prédiction de prix demain en Level 2.
+
+**Level 1 complet (3/3) terminé avec mention excellente !**
+
+
 
 #CodvedaJourney #CodvedaExperience #FutureWithCodveda  
-#CodvedaAchievements #CodvedaProjects  
-#DataScience #DataCleaning #Python #Pandas  
 
-Lien de la branche → https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level1-data-cleaning  
+#CodvedaAchievements #CodvedaProjects  
+
+#DataScience #EDA #Python #Seaborn #Matplotlib  
+
+
+
+Lien de la branche → https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level1-eda  
+
+
 
 @Codveda
