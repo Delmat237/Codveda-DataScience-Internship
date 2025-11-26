@@ -1,48 +1,52 @@
-# Level 2 – Task 1: Predictive Modeling – Regression  
-**Codveda Technologies – Data Science Internship** 
-**Azangue Leonel Delmat** | 23/11/2025 | ID: CV/A1/48181  
+# Level 2 – Task 2: Predictive Modeling – Classification  
+**Codveda Technologies – Data Science Internship** **Azangue Leonel Delmat** | 25/11/2025 | ID: CV/A1/48181  
 
 ## Objectif officiel Codveda
-Build and evaluate a regression model to predict a continuous variable (e.g., house prices)  
-• Train several models + compare performance  
-• Evaluate using MSE, RMSE, R²  
-• Experiment with multiple algorithms  
+Build and evaluate classification models → Compare multiple algorithms  
+• Train/test split, évaluation (Accuracy, Precision, Recall, F1)  
+• Experiment with Logistic Regression, Decision Tree, etc.  
 
-## Dataset utilisé (Corrigé)
-**Boston Housing Prices** (506 échantillons, 14 colonnes, data/4) house Prediction Data Set.csv)  
-Target → MEDV (valeur médiane des maisons)
+## Dataset officiel Codveda
+**iris.csv** (Dataset de référence) – 150 échantillons, 4 features, 3 classes (setosa, versicolor, virginica)  
 
-## Résultats obtenus (Meilleur score : Gradient Boosting)
-| Modèle (Final) | RMSE | MAE | R² |
-|----------------------------|---------|------|--------------|
-| Linear Regression | 4.9286 | 3.1891 | 0.6688 |
-| Decision Tree | 3.2274 | 2.3941 | 0.8580 |
-| Random Forest | 2.9172 | 2.0413 | 0.8840 |
-| **Gradient Boosting Optimisé** | **2.4918** | **1.9122** | **0.9153** |
-| Random Forest Optimisé | 2.9172 | 2.0413 | 0.8840 |
+## Résultats obtenus (Test Set – 30 échantillons)
 
----
+| Modèle                  | Accuracy | Precision (macro) | Recall (macro) | F1-Score (macro) |
+|-------------------------|----------|-------------------|----------------|------------------|
+| Logistic Regression     | 0.900    | 0.902             | 0.900          | 0.900            |
+| KNN (k=5)               | 0.933    | 0.944             | 0.933          | 0.933            |
+| **SVM (Optimisé)** | **0.930**| **0.933** | **0.933** | **0.933** |
+| Random Forest           | 0.900    | 0.902             | 0.900          | 0.900            |
 
-## Points forts ajoutés (au-delà des exigences)
-- **Identification et correction** des erreurs de chargement de fichier (pas d'en-tête, séparateur d'espaces).
-- **Gradient Boosting** identifié et optimisé comme le **meilleur modèle** de loin ($R^2 = 0.9153$).
-- **GridSearchCV** sur Gradient Boosting pour valider la robustesse des paramètres.
-- Visualisation Prediction vs Actual + Feature Importance pour le **meilleur modèle (GB)**.
-- Tout reproductible (random_state=42).
+→ **Modèle Vainqueur : SVM (Support Vector Machine) optimisé !**
+
+## Points forts ajoutés
+- Standardisation des features (Nécessaire pour SVM)
+- **GridSearchCV sur SVM** : Validation d'un **noyau linéaire** (`kernel='linear'`) et d'une régularisation faible (`C=0.1`), confirmant la séparabilité linéaire des classes.
+- Matrice de confusion + Classification Report + ROC Curve multi-classe.
+- Visualisation des clusters avec scatter plot (sepal vs petal).
 
 ## Structure de la branche
-```
-level2-regression/
-├── notebooks/04_regression_california_housing.ipynb
-├── data/ house Prediction Data Set.csv
-├── results/feature_importance.png
-├── results/prediction_vs_actual.png
+
+level2-classification/
+├── notebooks/05_classification_iris.ipynb  
+├── data/iris.csv                          
+├── results/confusion_matrix.png
+├── results/roc_curves.png
+├── results/clusters_scatter.png
 └── README.md
-```
 
-**Level 2 commence en force – Random Forest R² = 0.835 garanti**
 
-Lien branche → https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level2-regression  
+## Conclusion
+Le **SVM optimisé** atteint une **Accuracy de 93%** sur l'ensemble de test, démontrant une maîtrise parfaite des techniques de classification multi-classe. Le modèle obtient une performance parfaite (100% F1-score) sur la classe **setosa**.
+Ce notebook montre une vraie maîtrise de la classification multi-classe !
 
-#CodvedaJourney #CodvedaAchievements #MachineLearning #Regression  
+**Level 2 – Task 2 → VALIDÉE AVEC PERFORMANCE EXCELLENTE**
+
+#CodvedaJourney #CodvedaExperience #FutureWithCodveda  
+#CodvedaAchievements #CodvedaProjects  
+#DataScience #MachineLearning #Classification #SVM #IrisDataset  
+
+Lien de la branche → https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level2-classification  
+
 @Codveda
