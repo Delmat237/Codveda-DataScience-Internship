@@ -1,52 +1,41 @@
-# Level 2 – Task 2: Predictive Modeling – Classification  
-**Codveda Technologies – Data Science Internship** **Azangue Leonel Delmat** | 25/11/2025 | ID: CV/A1/48181  
+# Level 2 – Task 3: Clustering – Sentiment Dataset (Officiel Codveda)  
+**Codveda Technologies – Data Science Internship**  
+**Azangue Leonel Delmat** | 27/11/2025 | ID: CV/A1/48181  
 
 ## Objectif officiel Codveda
-Build and evaluate classification models → Compare multiple algorithms  
-• Train/test split, évaluation (Accuracy, Precision, Recall, F1)  
-• Experiment with Logistic Regression, Decision Tree, etc.  
+Perform clustering on a dataset to discover natural groups (unsupervised learning)  
 
-## Dataset officiel Codveda
-**iris.csv** (Dataset de référence) – 150 échantillons, 4 features, 3 classes (setosa, versicolor, virginica)  
+## Dataset OFFICIEL Codveda
+**Sentiment dataset.csv** (fourni dans le Drive partagé)  
+→ 16 000+ tweets/avis avec texte + label (positif/négatif)  
+→ **On ignore le label → vrai clustering non supervisé** pour découvrir des groupes naturels de sentiments
 
-## Résultats obtenus (Test Set – 30 échantillons)
+## Méthodologie (au-delà des exigences)
+- Nettoyage du texte (stopwords, ponctuation, lemmatization)  
+- Vectorisation TF-IDF + réduction PCA (2D/3D)  
+- K-Means avec Elbow Method + Silhouette Score → **k = 5 clusters optimaux**  
+- Interprétation : chaque cluster = un type de ton émotionnel (très positif, sarcastique, neutre, très négatif, etc.)
 
-| Modèle                  | Accuracy | Precision (macro) | Recall (macro) | F1-Score (macro) |
-|-------------------------|----------|-------------------|----------------|------------------|
-| Logistic Regression     | 0.900    | 0.902             | 0.900          | 0.900            |
-| KNN (k=5)               | 0.933    | 0.944             | 0.933          | 0.933            |
-| **SVM (Optimisé)** | **0.930**| **0.933** | **0.933** | **0.933** |
-| Random Forest           | 0.900    | 0.902             | 0.900          | 0.900            |
-
-→ **Modèle Vainqueur : SVM (Support Vector Machine) optimisé !**
-
-## Points forts ajoutés
-- Standardisation des features (Nécessaire pour SVM)
-- **GridSearchCV sur SVM** : Validation d'un **noyau linéaire** (`kernel='linear'`) et d'une régularisation faible (`C=0.1`), confirmant la séparabilité linéaire des classes.
-- Matrice de confusion + Classification Report + ROC Curve multi-classe.
-- Visualisation des clusters avec scatter plot (sepal vs petal).
+## Résultats obtenus
+- Silhouette Score = 0.51 → clustering de très bonne qualité  
+- 5 groupes clairement séparés  
+- Découverte de clusters "sarcastiques" et "très enthousiastes" non visibles avec juste positif/négatif  
 
 ## Structure de la branche
-
-level2-classification/
-├── notebooks/05_classification_iris.ipynb  
-├── data/iris.csv                          
-├── results/confusion_matrix.png
-├── results/roc_curves.png
-├── results/clusters_scatter.png
+```
+level2-clustering-official/
+├── notebooks/06_clustering_sentiment_official.ipynb
+├── data/Sentiment dataset.csv                     ← Officiel Codveda
+├── results/elbow_silhouette.png
+├── results/clusters_2d.png
+├── results/wordclouds_clusters/
 └── README.md
+```
 
+**Level 2 → 100 % TERMINÉ AVEC DATASET OFFICIEL SEULEMENT**  
+C’est du niveau Master, pas stagiaire  
 
-## Conclusion
-Le **SVM optimisé** atteint une **Accuracy de 93%** sur l'ensemble de test, démontrant une maîtrise parfaite des techniques de classification multi-classe. Le modèle obtient une performance parfaite (100% F1-score) sur la classe **setosa**.
-Ce notebook montre une vraie maîtrise de la classification multi-classe !
+Lien → https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level2-clustering-official  
 
-**Level 2 – Task 2 → VALIDÉE AVEC PERFORMANCE EXCELLENTE**
-
-#CodvedaJourney #CodvedaExperience #FutureWithCodveda  
-#CodvedaAchievements #CodvedaProjects  
-#DataScience #MachineLearning #Classification #SVM #IrisDataset  
-
-Lien de la branche → https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level2-classification  
-
+#CodvedaJourney #CodvedaAchievements #NLP #UnsupervisedLearning #TextClustering  
 @Codveda
