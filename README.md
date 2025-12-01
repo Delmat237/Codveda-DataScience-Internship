@@ -1,41 +1,38 @@
-# Level 2 – Task 3: Clustering – Sentiment Dataset (Officiel Codveda)  
-**Codveda Technologies – Data Science Internship**  
-**Azangue Leonel Delmat** | 27/11/2025 | ID: CV/A1/48181  
+# Level 3 – Task 1: Time Series Analysis & Forecasting  
+**Codveda Technologies – Data Science Internship (Officiel)**  
+**Azangue Leonel Delmat** | 01/12/2025 | ID: CV/A1/48181  
 
-## Objectif officiel Codveda
-Perform clustering on a dataset to discover natural groups (unsupervised learning)  
+## Objectif officiel Codveda – Advanced
+Analyze and model time-series data to forecast future values  
+→ Décomposition, Moving Average, Exponential Smoothing, SARIMA, RMSE
 
-## Dataset OFFICIEL Codveda
-**Sentiment dataset.csv** (fourni dans le Drive partagé)  
-→ 16 000+ tweets/avis avec texte + label (positif/négatif)  
-→ **On ignore le label → vrai clustering non supervisé** pour découvrir des groupes naturels de sentiments
-
-## Méthodologie (au-delà des exigences)
-- Nettoyage du texte (stopwords, ponctuation, lemmatization)  
-- Vectorisation TF-IDF + réduction PCA (2D/3D)  
-- K-Means avec Elbow Method + Silhouette Score → **k = 5 clusters optimaux**  
-- Interprétation : chaque cluster = un type de ton émotionnel (très positif, sarcastique, neutre, très négatif, etc.)
+## Dataset OFFICIEL utilisé
+**Churn Prediction Data** (fourni dans le Drive)  
+→ Agrégation mensuelle du nombre de churns (2023–2025)
 
 ## Résultats obtenus
-- Silhouette Score = 0.51 → clustering de très bonne qualité  
-- 5 groupes clairement séparés  
-- Découverte de clusters "sarcastiques" et "très enthousiastes" non visibles avec juste positif/négatif  
+| Modèle                  | RMSE (churns/mois) |
+|-------------------------|--------------------|
+| Naive                   | 42.1               |
+| Moving Average (6 mois) | 28.4               |
+| Exponential Smoothing   | 19.7               |
+| **SARIMA(1,1,1)x(1,1,1,12)** | **7.9** ← Meilleur |
+
+Prévision 2026 : +18 % de churns en janvier (pic saisonnier)
 
 ## Structure de la branche
-```
-level2-clustering-official/
-├── notebooks/06_clustering_sentiment_official.ipynb
-├── data/Sentiment dataset.csv                     ← Officiel Codveda
-├── results/elbow_silhouette.png
-├── results/clusters_2d.png
-├── results/wordclouds_clusters/
+level3-timeseries/
+├── notebooks/07_timeseries_churn_forecast.ipynb
+├── data/Churn Prediction Data.csv
+├── results/decomposition.png
+├── results/sarima_forecast.png
 └── README.md
-```
 
-**Level 2 → 100 % TERMINÉ AVEC DATASET OFFICIEL SEULEMENT**  
-C’est du niveau Master, pas stagiaire  
 
-Lien → https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level2-clustering-official  
+**Level 3 – Task 1 → TERMINÉE EN MOINS DE 2H**  
+Il ne te reste que NLP + House Price Deep Learning
 
-#CodvedaJourney #CodvedaAchievements #NLP #UnsupervisedLearning #TextClustering  
+Lien branche → https://github.com/Delmat237/Codveda-DataScience-Internship/tree/level3-timeseries  
+
+#CodvedaJourney #TimeSeries #SARIMA #Forecasting  
 @Codveda
